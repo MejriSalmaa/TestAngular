@@ -1,0 +1,9 @@
+{
+    "album": [
+      {
+        "id": 1,
+        "title": "ete 2023",
+        "coverPicture": "../src/assets/baya.gif"
+      }
+    ]
+  }

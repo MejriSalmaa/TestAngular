@@ -1,0 +1,21 @@
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(album)" >
+            
+
+       
+            <label>Title :</label>
+            <input type="text" class="form-control" name="title" [(ngModel)]="album.title" #title="ngModel" required >
+        
+        <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+            <div *ngIf="title.errors?.['required']">title is required</div>
+
+        </div>
+
+        <label>coverPicture</label>
+        <input type="text" class="form-control" name="description" [(ngModel)]="album.coverPicture" #description="ngModel" minlength="5">
+    
+    <div class="alert alert-danger" *ngIf="description.touched && description.invalid">
+        <div *ngIf="description.errors?.['minlength']">Title must be at least 5 characters long</div>
+    </div>
+        <button class="btn btn-warning" [disabled]="f.invalid">Submit</button>
+    </form>
